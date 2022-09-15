@@ -15,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 // Homepage
 Route::get('/', function () {
-    return view('home');
+    $dc_series = config('data.dc-comic-series');
+    $banner_items = config('data.banner-items');
+    dump($banner_items);
+    return view('home', compact('dc_series', 'banner_items'));
 })->name('characters');
 
 
