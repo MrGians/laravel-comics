@@ -7,6 +7,10 @@
   display: flex;
 }
 
+.w-50 {
+  width: 50%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -220,6 +224,108 @@ a {
   max-width: 40px;
 }
 #banner .col span {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  padding-left: 1rem;
+}
+
+#single-serie {
+  background-color: #0282f9;
+  padding-top: 4rem;
+}
+#single-serie .serie-info {
+  background-color: white;
+}
+#single-serie .serie-info .row {
+  position: relative;
+  padding: 2.5rem 0;
+}
+#single-serie .serie-info .row .col:first-child {
+  flex-grow: 1;
+}
+#single-serie .serie-info .row .col:first-child .comic-cover {
+  height: 200px;
+  position: absolute;
+  left: 0;
+  bottom: 105%;
+  border: 1px solid white;
+}
+#single-serie .serie-info .row .col:first-child .comic-cover img {
+  width: 100%;
+  height: 100%;
+}
+#single-serie .serie-info .row .col:first-child .comic-cover .top-label,
+#single-serie .serie-info .row .col:first-child .comic-cover .bottom-label {
+  position: absolute;
+  left: 0;
+  padding: 0 5px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #00a9d9;
+  font-size: 0.6rem;
+}
+#single-serie .serie-info .row .col:first-child .comic-cover .top-label {
+  top: 0;
+}
+#single-serie .serie-info .row .col:first-child .comic-cover .bottom-label {
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+#single-serie .serie-info .row .col:first-child h2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+#single-serie .serie-info .row .col:first-child .buy-info {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #55ba59;
+  color: #303030;
+  border-bottom: 1px solid black;
+}
+#single-serie .serie-info .row .col:first-child .buy-info > div:first-of-type {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+#single-serie .serie-info .row .col:first-child .buy-info > div:first-of-type .price {
+  color: white;
+}
+#single-serie .serie-info .row .col:first-child .buy-info > div:first-of-type .available {
+  text-transform: uppercase;
+  text-align: right;
+}
+#single-serie .serie-info .row .col:first-child .buy-info .check {
+  flex-grow: 0;
+  height: 100%;
+  border-left: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+#single-serie .serie-info .row .col:first-child .buy-info .check a {
+  color: white;
+  padding: 0 1rem;
+}
+
+#banner-light {
+  background-color: #0282f9;
+  color: white;
+}
+#banner-light .col {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+#banner-light .col img {
+  height: 40px;
+  max-width: 40px;
+}
+#banner-light .col span {
   text-transform: uppercase;
   font-size: 0.6rem;
   padding-left: 1rem;
