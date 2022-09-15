@@ -14,6 +14,9 @@
   @include('includes.header')
   <!-- Main -->
   <main>
+    <!-- Jumbotron -->
+    <section id="jumbotron"></section>
+    
     @yield('main-content')
   </main>
   <!-- Footer -->

@@ -1,20 +1,20 @@
 @extends('layouts.main')
 
 @section('main-content')
-<!-- Jumbotron -->
-<section id="jumbotron"></section>
 
 <!-- Current Series -->
 <section id="current-series">
     <div class="container">
       <h4>Current Series</h4>
       <div class="row">
-        @foreach ($dc_series as $serie)
+        @foreach ($comics as $serie)
         <div class="col card">
-          <figure>
-            <img src="{{ $serie['thumb'] }}" alt="{{ $serie['series'] }}" />
-            <figcaption>{{ $serie['series'] }}</figcaption>
-          </figure>
+          <a href="{{ route('current-series') }}">
+            <figure>
+              <img src="{{ $serie['thumb'] }}" alt="{{ $serie['series'] }}" />
+              <figcaption>{{ $serie['series'] }}</figcaption>
+            </figure>
+          </a>
         </div>
         @endforeach
       </div>
