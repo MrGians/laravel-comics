@@ -15,7 +15,7 @@ $header_links = config('data.header-links');
         <ul>
           @foreach ($header_links as $link)
           <li>
-            <a href="{{ route(link['route_name']) }}" class="{{ request()->routeIs($link['route_name']) ? 'active' : '' }}">
+            <a href="{{ route($link['route_name']) }}" class="{{ request()->routeIs($link['route_name']) ? 'active' : '' }}">
               {{ $link['text'] }}
             </a>
           </li>
