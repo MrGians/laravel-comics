@@ -61,6 +61,10 @@ $footer_links = config('data.footer-links');
                 </div>
               </div>
             </div>
+            <!-- Copyright -->
+                <div class="copy">
+                  <p>All site content TM and &copy; 2020 DC Entertainment, unless otherwise <a href="#">noted here</a>. All rights reserver. <br/> <a href="#">Cookies Settings</a></p>
+                </div>
           </div>
           <div class="col logo">
             <!-- Footer Top Bg-logo -->

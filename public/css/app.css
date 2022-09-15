@@ -67,6 +67,17 @@ a {
 #footer-top .row .col {
   padding-right: 2rem;
 }
+#footer-top .row .col .copy {
+  padding: 0 1.2rem;
+  padding-bottom: 1rem;
+}
+#footer-top .row .col .copy p {
+  font-size: 0.55rem;
+  color: #adadad;
+}
+#footer-top .row .col .copy p a {
+  color: #0282f9;
+}
 #footer-top .row .col .row.links {
   padding: 1.2rem;
 }

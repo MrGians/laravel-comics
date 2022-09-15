@@ -10,6 +10,19 @@
         .col {
             padding-right: 2rem;
 
+            .copy {
+                padding: 0 1.2rem;
+                padding-bottom: 1rem;
+
+                & p {
+                    font-size: 0.55rem;
+                    color: #adadad;
+
+                    & a {
+                        color: $primary;
+                    }
+                }
+            }
             .row.links {
                 padding: 1.2rem;
 
