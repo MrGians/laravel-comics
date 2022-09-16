@@ -98,7 +98,7 @@
             <!-- Serie sale date -->
             <div class="sale-date">
               <h6>On Sale Date:</h6>
-              <h6>{{ $comic['sale_date'] }}</h6>
+              <h6>{{ date('M d Y', strtotime($comic['sale_date'])) }}</h6>
             </div>
             <hr/>
           </div>
