@@ -12,17 +12,17 @@
           <div class="col">
             <!-- Comic Cover -->
             <figure class="comic-cover">
-              <span class="top-label">{{ $comics[0]['type'] }}</span>
-              <img src="{{ $comics[0]['thumb'] }}" alt="{{ $comics[0]['series'] }}">
+              <span class="top-label">{{ $comic['type'] }}</span>
+              <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
               <span class="bottom-label">View Gallery</span>
             </figure>
             <!-- Title -->
-            <h2>{{ $comics[0]['title'] }}</h2>
+            <h2>{{ $comic['title'] }}</h2>
             <!-- Buy Information -->
             <div class="buy-info">
               <div>
                 <!-- Price -->
-                <span class="price">U.S. Price: <strong>{{ $comics[0]['price'] }}</strong></span>
+                <span class="price">U.S. Price: <strong>{{ $comic['price'] }}</strong></span>
                 <!-- Availability -->
                 <span class="available">Available</span>
               </div>
@@ -32,13 +32,13 @@
               </div>
             </div>
             <!-- Description -->
-            <p>{{ $comics[0]['description'] }}</p>
+            <p>{{ $comic['description'] }}</p>
           </div>
           <!-- Advertisement // TODO fix -->
           <div class="col">
-            <h5>Advertising</h5>
+            <h5>Advertisement</h5>
             <figure class="adv">
-              <img src="{{asset('img/adv.jpg')}}" alt="{{ $comics[0]['series'] }}">
+              <img src="{{asset('img/adv.jpg')}}" alt="{{ $comic['series'] }}">
             </figure>
           </div>
         </div>
@@ -47,26 +47,61 @@
   <hr />
   <!-- Additional Info -->
   <div class="additional-info">
-    <div class="container w-70">
+    <div class="container">
       <div class="row">
+        <!-- Talent info -->
         <div class="col">
-          <h4>Talent</h4>
-          <hr/>
-          <div>
-            <h6>Art by:</h6>
-            <p>
-              @forelse ($comics[0]['artists'] as $artist)
+          <div class="talent">
+            <h4>Talent</h4>
+            <hr/>
+            <!-- Artist list -->
+            <div class="artist">
+              <h6>Art by:</h6>
+              <p>
+                @forelse ($comic['artists'] as $artist)
+                <span>{{$artist}}</span>@if(!$loop->last), @else.@endif
+                @endforeach
+              </p>
+            </div>
+            <hr/>
+            <!-- Writers list -->
+            <div class="writers">
+              <h6>Written by:</h6>
+              <p>
+                @forelse ($comic['writers'] as $writers)
 
-              {{$artist}}@if(!$loop->last), @else.@endif
+                <span>{{$writers}}</span>@if(!$loop->last), @else.@endif
 
-              @endforeach
-            </p>
+                @endforeach
+              </p>
+            </div>
+            <hr/>
           </div>
-          <hr/>
-          <div></div>
-          <hr/>
         </div>
+        <!-- Specs info -->
         <div class="col">
+          <div class="specs">
+            <h4>Specs</h4>
+            <hr/>
+            <!-- Serie type -->
+            <div class="type">
+              <h6>Series:</h6>
+              <span>{{ $comic['series'] }}</span>
+            </div>
+            <hr/>
+            <!-- Serie price -->
+            <div class="price">
+              <h6>U.S. Price:</h6>
+              <h6>{{ $comic['price'] }}</h6>
+            </div>
+            <hr/>
+            <!-- Serie sale date -->
+            <div class="sale-date">
+              <h6>On Sale Date:</h6>
+              <h6>{{ $comic['sale_date'] }}</h6>
+            </div>
+            <hr/>
+          </div>
         </div>
       </div>
     </div>

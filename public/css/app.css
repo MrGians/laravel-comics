@@ -7,10 +7,6 @@
   display: flex;
 }
 
-.w-50 {
-  width: 50%;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +20,13 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+#jumbotron {
+  height: 300px;
+  background-image: url("../img/jumbotron.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #navbar {
@@ -100,8 +103,8 @@ a {
   color: #adadad;
 }
 #footer-top .row .col.logo {
-  width: 450px;
-  height: 250px;
+  width: 500px;
+  height: 300px;
   overflow: hidden;
 }
 #footer-top .row .col.logo img {
@@ -147,13 +150,6 @@ a {
 #footer-bottom .row .col.social-links a img {
   width: 100%;
   height: 100%;
-}
-
-#jumbotron {
-  height: 300px;
-  background-image: url("../img/jumbotron.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #current-series {
@@ -238,10 +234,11 @@ a {
 }
 #single-serie .serie-info .row {
   position: relative;
-  padding: 2.5rem 0;
+  padding: 3.5rem 0;
 }
 #single-serie .serie-info .row .col:first-child {
   flex-grow: 1;
+  padding-right: 3rem;
 }
 #single-serie .serie-info .row .col:first-child .comic-cover {
   height: 200px;
@@ -275,6 +272,7 @@ a {
 #single-serie .serie-info .row .col:first-child h2 {
   text-transform: uppercase;
   font-size: 1.3rem;
+  color: #1c1c1c;
 }
 #single-serie .serie-info .row .col:first-child .buy-info {
   width: 100%;
@@ -285,6 +283,7 @@ a {
   background-color: #55ba59;
   color: #303030;
   border-bottom: 1px solid black;
+  margin: 1rem 0;
 }
 #single-serie .serie-info .row .col:first-child .buy-info > div:first-of-type {
   flex-grow: 1;
@@ -299,6 +298,7 @@ a {
 #single-serie .serie-info .row .col:first-child .buy-info > div:first-of-type .available {
   text-transform: uppercase;
   text-align: right;
+  color: white;
 }
 #single-serie .serie-info .row .col:first-child .buy-info .check {
   flex-grow: 0;
@@ -311,22 +311,93 @@ a {
   color: white;
   padding: 0 1rem;
 }
+#single-serie .serie-info .row .col:last-child h5 {
+  text-transform: uppercase;
+  color: #303030;
+  text-align: right;
+  font-weight: bold;
+}
+#single-serie .serie-info .row .col:last-child .adv img {
+  max-width: 250px;
+  min-width: 250px;
+}
+#single-serie .additional-info {
+  background-color: #f6f6f6;
+  padding-bottom: 6rem;
+}
+#single-serie .additional-info .row {
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+#single-serie .additional-info .row .col {
+  width: calc(50% - 1rem);
+}
+#single-serie .additional-info .talent h4,
+#single-serie .additional-info .specs h4 {
+  margin-bottom: 1rem;
+}
+#single-serie .additional-info .artist,
+#single-serie .additional-info .writers,
+#single-serie .additional-info .type,
+#single-serie .additional-info .price,
+#single-serie .additional-info .sale-date {
+  display: flex;
+  padding: 0.5rem 0;
+}
+#single-serie .additional-info .artist h6,
+#single-serie .additional-info .writers h6,
+#single-serie .additional-info .type h6,
+#single-serie .additional-info .price h6,
+#single-serie .additional-info .sale-date h6 {
+  flex-shrink: 0;
+}
+#single-serie .additional-info .artist h6:first-child,
+#single-serie .additional-info .writers h6:first-child,
+#single-serie .additional-info .type h6:first-child,
+#single-serie .additional-info .price h6:first-child,
+#single-serie .additional-info .sale-date h6:first-child {
+  width: 35%;
+}
+#single-serie .additional-info .artist p,
+#single-serie .additional-info .writers p,
+#single-serie .additional-info .type p,
+#single-serie .additional-info .price p,
+#single-serie .additional-info .sale-date p {
+  line-height: 0.8rem;
+}
+#single-serie .additional-info .artist span,
+#single-serie .additional-info .writers span,
+#single-serie .additional-info .type span,
+#single-serie .additional-info .price span,
+#single-serie .additional-info .sale-date span {
+  color: #0282f9;
+  font-size: 0.7rem;
+}
+#single-serie .additional-info .type > span {
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
 #banner-light {
-  background-color: #0282f9;
-  color: white;
+  background-color: #f6f6f6;
+  border-top: 1px solid #d8d8d8;
 }
 #banner-light .col {
+  width: 20%;
   display: flex;
-  align-items: center;
-  padding: 2rem;
+  justify-content: space-between;
+  padding: 1rem;
+  border-left: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
 }
 #banner-light .col img {
   height: 40px;
   max-width: 40px;
+  filter: invert(91%) sepia(4%) saturate(16%) hue-rotate(343deg) brightness(97%) contrast(91%);
 }
 #banner-light .col span {
   text-transform: uppercase;
+  font-weight: bold;
   font-size: 0.6rem;
-  padding-left: 1rem;
+  color: #aea8a3;
 }

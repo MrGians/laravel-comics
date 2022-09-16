@@ -1,94 +1,4 @@
-// | Characters page (home)
-
-// # Jumbotron section
-#jumbotron {
-    height: 300px;
-    background-image: url("../img/jumbotron.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-// # Current Series section
-#current-series {
-    background-color: $secondary;
-    padding: 2rem 0;
-    position: relative;
-
-    h4 {
-        position: absolute;
-        top: 0;
-        transform: translateY(-50%);
-
-        text-transform: uppercase;
-        color: white;
-        background-color: $primary;
-        padding: 0.5rem 1.2rem;
-    }
-    .row {
-        flex-wrap: wrap;
-        margin: 0 -1rem;
-
-        .col {
-            width: calc(100% / 6 - 2rem);
-            margin: 1rem;
-        }
-
-        .card {
-            height: 180px;
-
-            figure {
-                height: 100%;
-                width: 100%;
-
-                img {
-                    height: 80%;
-                    width: 100%;
-                    object-fit: cover;
-                    object-position: top;
-                }
-                figcaption {
-                    color: white;
-                    font-size: 0.8rem;
-                    text-transform: uppercase;
-                }
-            }
-        }
-    }
-    .btn {
-        display: block;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: white;
-        background-color: $primary;
-        border: 2px solid $primary;
-        padding: 0.5rem 3.5rem;
-        margin: 4rem auto 0;
-        cursor: pointer;
-    }
-}
-
-// # Content Banner Section
-#banner {
-    background-color: $primary;
-    color: white;
-
-    .col {
-        @include flex_center("cross");
-        padding: 2rem;
-
-        img {
-            height: 40px;
-            max-width: 40px;
-        }
-        span {
-            text-transform: uppercase;
-            font-size: 0.6rem;
-            padding-left: 1rem;
-        }
-    }
-}
-
-// | Current series page [subpage of Characters]
+// # Single Comic page [subpage of Comics]
 #single-serie {
     background-color: $primary;
     padding-top: 4rem;
@@ -98,10 +8,11 @@
 
         .row {
             position: relative;
-            padding: 2.5rem 0;
+            padding: 3.5rem 0;
 
             .col:first-child {
                 flex-grow: 1;
+                padding-right: 3rem;
 
                 .comic-cover {
                     height: 200px;
@@ -139,6 +50,7 @@
                 h2 {
                     text-transform: uppercase;
                     font-size: 1.3rem;
+                    color: $secondary;
                 }
 
                 .buy-info {
@@ -149,6 +61,7 @@
                     background-color: $buy-info-label;
                     color: $tertiary;
                     border-bottom: 1px solid black;
+                    margin: 1rem 0;
 
                     & > div:first-of-type {
                         flex-grow: 1;
@@ -162,6 +75,7 @@
                         .available {
                             text-transform: uppercase;
                             text-align: right;
+                            color: white;
                         }
                     }
                     .check {
@@ -177,27 +91,97 @@
                     }
                 }
             }
+
+            .col:last-child {
+                h5 {
+                    text-transform: uppercase;
+                    color: $tertiary;
+                    text-align: right;
+                    font-weight: bold;
+                }
+
+                .adv {
+                    img {
+                        max-width: 250px;
+                        min-width: 250px;
+                    }
+                }
+            }
+        }
+    }
+
+    .additional-info {
+        background-color: #f6f6f6;
+        padding-bottom: 6rem;
+
+        .row {
+            justify-content: space-between;
+            padding: 1.5rem 0;
+
+            .col {
+                width: calc(50% - 1rem);
+            }
+        }
+
+        .talent h4,
+        .specs h4 {
+            margin-bottom: 1rem;
+        }
+
+        .artist,
+        .writers,
+        .type,
+        .price,
+        .sale-date {
+            display: flex;
+            padding: 0.5rem 0;
+
+            h6 {
+                flex-shrink: 0;
+                &:first-child {
+                    width: 35%;
+                }
+            }
+            p {
+                line-height: 0.8rem;
+            }
+            span {
+                color: $primary;
+                font-size: 0.7rem;
+            }
+        }
+
+        .type > span {
+            text-transform: uppercase;
+            font-weight: bold;
         }
     }
 }
 
 // # Content Banner light
 #banner-light {
-    background-color: $primary;
-    color: white;
+    background-color: #f6f6f6;
+    border-top: 1px solid $light-grey;
 
     .col {
-        @include flex_center("cross");
-        padding: 2rem;
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        border-left: 1px solid $light-grey;
+        border-right: 1px solid $light-grey;
 
         img {
             height: 40px;
             max-width: 40px;
+            filter: invert(91%) sepia(4%) saturate(16%) hue-rotate(343deg)
+                brightness(97%) contrast(91%);
         }
         span {
             text-transform: uppercase;
+            font-weight: bold;
             font-size: 0.6rem;
-            padding-left: 1rem;
+            color: #aea8a3;
         }
     }
 }
