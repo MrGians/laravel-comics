@@ -9,7 +9,7 @@
       <div class="row">
         @foreach ($comics as $serie)
         <div class="col card">
-          <a href="{{ route('current-series') }}">
+          <a href="{{ route('comics.show', ['id' => $loop->index]) }}">
             <figure>
               <img src="{{ $serie['thumb'] }}" alt="{{ $serie['series'] }}" />
               <figcaption>{{ $serie['series'] }}</figcaption>

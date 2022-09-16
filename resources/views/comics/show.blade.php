@@ -2,8 +2,9 @@
 
 @section('main-content')
 
-<!-- Single Serie Info -->
+<!-- Single Serie -->
 <section id="single-serie">
+  <!-- Serie Info -->
   <div class="serie-info">
       <div class="container w-50">
         <div class="row">
@@ -31,18 +32,46 @@
               </div>
             </div>
             <!-- Description -->
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sequi sunt adipisci quibusdam libero autem ducimus, at accusamus ad sapiente magni repellendus nulla consequatur optio a quia. Exercitationem, natus illum.</p>
+            <p>{{ $comics[0]['description'] }}</p>
           </div>
-          <!-- Advertisement -->
+          <!-- Advertisement // TODO fix -->
           <div class="col">
+            <h5>Advertising</h5>
             <figure class="adv">
-              <img src="{{ asset('img/adv.jpg') }}" alt="{{ $comics[0]['series'] }}">
+              <img src="{{asset('img/adv.jpg')}}" alt="{{ $comics[0]['series'] }}">
             </figure>
           </div>
         </div>
     </div>
-  </div>  
-  </section>
+  </div>
+  <hr />
+  <!-- Additional Info -->
+  <div class="additional-info">
+    <div class="container w-70">
+      <div class="row">
+        <div class="col">
+          <h4>Talent</h4>
+          <hr/>
+          <div>
+            <h6>Art by:</h6>
+            <p>
+              @forelse ($comics[0]['artists'] as $artist)
+
+              {{$artist}}@if(!$loop->last), @else.@endif
+
+              @endforeach
+            </p>
+          </div>
+          <hr/>
+          <div></div>
+          <hr/>
+        </div>
+        <div class="col">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Banner Section -->
 <section id="banner-light">

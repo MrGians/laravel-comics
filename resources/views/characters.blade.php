@@ -2,6 +2,6 @@
 
 @section('main-content')
 <section>
-  <p>Comics page | Work in Progress</p>
+  <p>Characters page | Work in Progress</p>
 </section>
 @endsection

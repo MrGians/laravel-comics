@@ -13,26 +13,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Homepage (Characters)
+// Characters (Homepage)
 Route::get('/', function () {
-    $comics = config('data.comics');
-    $banner_items = config('data.banner-items');
-    return view('home', compact('comics', 'banner_items'));
+    return view('characters');
 })->name('characters');
-
-    // | Subpage of Characters page
-    Route::get('/current-series', function () {
-        $comics = config('data.comics');
-        $banner_items = config('data.banner-items');
-        return view('current-series', compact('comics', 'banner_items'));
-    })->name('current-series');
-
-
 
 // Comics
 Route::get('/comics', function () {
-    return view('comics');
-})->name('comics');
+    $comics = config('data.comics');
+    $banner_items = config('data.banner-items');
+    return view('comics.index', compact('comics', 'banner_items'));
+})->name('comics.index');
+
+
+    // | Subpage of Comics page
+    Route::get('/comics/{id}', function ($id) {
+        $comics = config('data.comics');
+        $comic = $comics[$id];
+        $banner_items = config('data.banner-items');
+
+        return view('comics.show', compact('comic', 'banner_items'));
+    })->name('comics.show');
+
+
 
 // Movies
 Route::get('/movies', function () {

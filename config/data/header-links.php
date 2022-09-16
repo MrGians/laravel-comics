@@ -6,7 +6,7 @@ return [
   ],
   [
     'text' => "Comics",
-    'route_name' => "comics",
+    'route_name' => "comics.index",
   ],
   [
     'text' => "Movies",
