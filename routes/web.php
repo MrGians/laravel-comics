@@ -21,8 +21,8 @@ Route::get('/', function () {
 // Comics
 Route::get('/comics', function () {
     $comics = config('data.comics');
-    $banner_items = config('data.banner-items');
-    return view('comics.index', compact('comics', 'banner_items'));
+    $main_banner_items = config('data.main-banner-items');
+    return view('comics.index', compact('comics', 'main_banner_items'));
 })->name('comics.index');
 
 
@@ -30,9 +30,9 @@ Route::get('/comics', function () {
     Route::get('/comics/{id}', function ($id) {
         $comics = config('data.comics');
         $comic = $comics[$id];
-        $banner_items = config('data.banner-items');
+        $comic_banner_items = config('data.comic-banner-items');
 
-        return view('comics.show', compact('comic', 'banner_items'));
+        return view('comics.show', compact('comic', 'comic_banner_items'));
     })->name('comics.show');
 
 

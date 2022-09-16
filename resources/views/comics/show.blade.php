@@ -108,14 +108,16 @@
   </div>
 </section>
 
-<!-- Banner Section -->
-<section id="banner-light">
+<!-- Comic Banner Section -->
+<section id="comic-banner">
     <div class="container">
       <div class="row">
-        @foreach ($banner_items as $item)
+        @foreach ($comic_banner_items as $item)
         <div class="col">
           <span>{{ $item['text'] }}</span>
-          <img src="{{ asset($item['src']) }}" alt="{{ $item['text'] }}" />
+          <figure>
+            <img src="{{ asset($item['src']) }}" alt="{{ $item['text'] }}" class="{{ $item['class'] }}" />
+          </figure>
         </div>
         @endforeach
       </div>

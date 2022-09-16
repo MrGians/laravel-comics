@@ -206,20 +206,20 @@ a {
   cursor: pointer;
 }
 
-#banner {
+#main-banner {
   background-color: #0282f9;
   color: white;
 }
-#banner .col {
+#main-banner .col {
   display: flex;
   align-items: center;
   padding: 2rem;
 }
-#banner .col img {
+#main-banner .col img {
   height: 40px;
   max-width: 40px;
 }
-#banner .col span {
+#main-banner .col span {
   text-transform: uppercase;
   font-size: 0.6rem;
   padding-left: 1rem;
@@ -378,24 +378,41 @@ a {
   font-weight: bold;
 }
 
-#banner-light {
+#comic-banner {
   background-color: #f6f6f6;
   border-top: 1px solid #d8d8d8;
 }
-#banner-light .col {
-  width: 20%;
+#comic-banner .col {
+  width: 25%;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   border-left: 1px solid #d8d8d8;
   border-right: 1px solid #d8d8d8;
 }
-#banner-light .col img {
-  height: 40px;
-  max-width: 40px;
-  filter: brightness(0) saturate(100%) invert(73%) sepia(28%) saturate(0%) hue-rotate(226deg) brightness(113%) contrast(98%);
+#comic-banner .col figure {
+  position: relative;
+  height: 37px;
+  width: 37px;
+  overflow: hidden;
 }
-#banner-light .col span {
+#comic-banner .col figure img {
+  position: absolute;
+  top: 0;
+}
+#comic-banner .col figure img.digital {
+  right: -111px;
+}
+#comic-banner .col figure img.shop {
+  right: 0px;
+}
+#comic-banner .col figure img.locator {
+  right: -37px;
+}
+#comic-banner .col figure img.subscribe {
+  right: -74px;
+}
+#comic-banner .col span {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 0.6rem;

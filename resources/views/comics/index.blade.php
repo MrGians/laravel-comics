@@ -23,11 +23,11 @@
     </div>
   </section>
 
-<!-- Banner Section -->
-<section id="banner">
+<!-- Main Banner Section -->
+<section id="main-banner">
     <div class="container">
       <div class="row">
-        @foreach ($banner_items as $item)
+        @foreach ($main_banner_items as $item)
         <div class="col">
           <img src="{{ asset($item['src']) }}" alt="{{ $item['text'] }}" />
           <span>{{ $item['text'] }}</span>
